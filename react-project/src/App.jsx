@@ -1,5 +1,5 @@
 import Header from "./Componentes/Header";
-import Main from "./Componentes/Main/Main";
+import Main from "./Componentes/Main/MainComponent";
 
 function App() {
   return (
