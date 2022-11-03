@@ -1,8 +1,8 @@
 let pokemon = [
   {
-    id: 001,
+    id: "#001",
     nombre: "Bulbasaur",
-    imagen: "../Imagenes/bulbasur.png",
+    imagen: "../Imagenes/bulbasaur.png",
     tipo: ["Grass", "Poison"],
     peso: "6.9 Kg",
     altura: "0.7 m",
@@ -20,10 +20,11 @@ let pokemon = [
       SDEF: 65,
       SPD: 45,
     },
+    color: "#74C848",
   },
 
   {
-    id: 004,
+    id: "#004",
     nombre: "Charmander",
     imagen: "../Imagenes/charmander.png",
     tipo: ["Fire"],
@@ -40,12 +41,13 @@ let pokemon = [
       SDEF: 50,
       SPD: 65,
     },
+    color: "#F57d31",
   },
 
   {
-    id: 007,
+    id: "#007",
     nombre: "Squirtle",
-    imagen: "../Imagen/squirtle.png",
+    imagen: "../Imagenes/squirtle.png",
     tipo: ["Water"],
     peso: "9.0 Kg",
     altura: "0.5 m",
@@ -60,10 +62,11 @@ let pokemon = [
       SDEF: 64,
       SPD: 43,
     },
+    color: "#6493eb",
   },
 
   {
-    id: 012,
+    id: "#012",
     nombre: "Butterfree",
     imagen: "../Imagenes/butterfree.png",
     tipo: ["Bug", "Flying"],
@@ -80,10 +83,11 @@ let pokemon = [
       SDEF: 80,
       SPD: 70,
     },
+    color: "#a78723",
   },
 
   {
-    id: 025,
+    id: "#025",
     nombre: "Pikachu",
     imagen: "../Imagenes/pikachu.png",
     tipo: ["Electric"],
@@ -100,12 +104,13 @@ let pokemon = [
       SDEF: 50,
       SPD: 90,
     },
+    color: "#f9cf30",
   },
 
   {
-    id: 092,
+    id: "#092",
     nombre: "Gastly",
-    imagen: "../Imagen/gastly.png",
+    imagen: "../Imagenes/gastly.png",
     tipo: ["Ghost", "Type"],
     peso: "0.1 Kg",
     altura: "1.3 m",
@@ -120,10 +125,11 @@ let pokemon = [
       SDEF: 35,
       SPD: 80,
     },
+    color: "#70559b",
   },
 
   {
-    id: 132,
+    id: "#132",
     nombre: "Ditto",
     imagen: "../Imagenes/ditto.png",
     tipo: ["Normal"],
@@ -140,10 +146,11 @@ let pokemon = [
       SDEF: 48,
       SPD: 48,
     },
+    color: "#aaa67f",
   },
 
   {
-    id: 152,
+    id: "#152",
     nombre: "Mew",
     imagen: "../Imagenes/Mew.png",
     tipo: ["Psychic"],
@@ -160,10 +167,11 @@ let pokemon = [
       SDEF: 100,
       SPD: 100,
     },
+    color: "#fb5584",
   },
 
   {
-    id: 304,
+    id: "#304",
     nombre: "Aron",
     imagen: "../Imagenes/aron.png",
     tipo: ["Steel", "Rock"],
@@ -180,6 +188,7 @@ let pokemon = [
       SDEF: 40,
       SPD: 30,
     },
+    color: "#b7b9d0",
   },
 ];
 
