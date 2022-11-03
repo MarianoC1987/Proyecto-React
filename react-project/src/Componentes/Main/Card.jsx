@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Badge, Image, Grid, GridItem } from "@chakra-ui/react";
+import { Box, Image, Grid, GridItem, Text } from "@chakra-ui/react";
+import bulbasaur from "../../../public/Imagenes/bulbasaur.png";
 
 function Card() {
   return (
@@ -8,27 +9,262 @@ function Card() {
       mx="auto"
       templateRows="repeat(3, 1fr)"
       templateColumns="repeat(3, 1fr)"
-      h="80vh"
+      h="50vh"
       w="90vw"
-      gap={6}
+      gap={3}
     >
       <GridItem
         borderRadius="10px"
         display="flex"
-        alignItems="flex-end"
-        justifyContent="center"
-        bg="blue.700"
+        alignItems="center"
+        justifyContent="space-between"
+        bgColor="#74C848"
+        flexDirection="column"
       >
-        <Box borderRadius="10px" m="5px" h="50%" w="99%" bgColor="white"></Box>
+        <Box
+          borderRadius="10px"
+          h="70%"
+          w="95%"
+          bgColor="white"
+          direction="column"
+          justify="space-between"
+          align="center"
+          my="0.5"
+        >
+          <Text h="20%" textAlign="right">
+            #001
+          </Text>
+          <Image h="80%" src={bulbasaur} />
+        </Box>
+        <Text h="20%" color="white">
+          Bulbasaur
+        </Text>
       </GridItem>
+      <GridItem
+        borderRadius="10px"
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        bgColor="#74C848"
+        flexDirection="column"
+      >
+        <Box
+          borderRadius="10px"
+          h="70%"
+          w="95%"
+          bgColor="white"
+          direction="column"
+          justify="space-between"
+          align="center"
+          my="0.5"
+        >
+          <Text h="20%" textAlign="right">
+            #001
+          </Text>
+          <Image h="80%" src={bulbasaur} />
+        </Box>
+        <Text h="20%" color="white">
+          Bulbasaur
+        </Text>
+      </GridItem>
+      <GridItem
+        borderRadius="10px"
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        bgColor="#74C848"
+        flexDirection="column"
+      >
+        <Box
+          borderRadius="10px"
+          h="70%"
+          w="95%"
+          bgColor="white"
+          direction="column"
+          justify="space-between"
+          align="center"
+          my="0.5"
+        >
+          <Text h="20%" textAlign="right">
+            #001
+          </Text>
+          <Image h="80%" src={bulbasaur} />
+        </Box>
+        <Text h="20%" color="white">
+          Bulbasaur
+        </Text>
+      </GridItem>
+      <GridItem
+        borderRadius="10px"
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        bgColor="#74C848"
+        flexDirection="column"
+      >
+        <Box
+          borderRadius="10px"
+          h="70%"
+          w="95%"
+          bgColor="white"
+          direction="column"
+          justify="space-between"
+          align="center"
+          my="0.5"
+        >
+          <Text h="20%" textAlign="right">
+            #001
+          </Text>
+          <Image h="80%" src={bulbasaur} />
+        </Box>
+        <Text h="20%" color="white">
+          Bulbasaur
+        </Text>
+      </GridItem>
+      <GridItem
+        borderRadius="10px"
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        bgColor="#74C848"
+        flexDirection="column"
+      >
+        <Box
+          borderRadius="10px"
+          h="70%"
+          w="95%"
+          bgColor="white"
+          direction="column"
+          justify="space-between"
+          align="center"
+          my="0.5"
+        >
+          <Text h="20%" textAlign="right">
+            #001
+          </Text>
+          <Image h="80%" src={bulbasaur} />
+        </Box>
+        <Text h="20%" color="white">
+          Bulbasaur
+        </Text>
+      </GridItem>
+      <GridItem
+        borderRadius="10px"
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        bgColor="#74C848"
+        flexDirection="column"
+      >
+        <Box
+          borderRadius="10px"
+          h="70%"
+          w="95%"
+          bgColor="white"
+          direction="column"
+          justify="space-between"
+          align="center"
+          my="0.5"
+        >
+          <Text h="20%" textAlign="right">
+            #001
+          </Text>
+          <Image h="80%" src={bulbasaur} />
+        </Box>
+        <Text h="20%" color="white">
+          Bulbasaur
+        </Text>
+      </GridItem>
+      <GridItem
+        borderRadius="10px"
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        bgColor="#74C848"
+        flexDirection="column"
+      >
+        <Box
+          borderRadius="10px"
+          h="70%"
+          w="95%"
+          bgColor="white"
+          direction="column"
+          justify="space-between"
+          align="center"
+          my="0.5"
+        >
+          <Text h="20%" textAlign="right">
+            #001
+          </Text>
+          <Image h="80%" src={bulbasaur} />
+        </Box>
+        <Text h="20%" color="white">
+          Bulbasaur
+        </Text>
+      </GridItem>
+      <GridItem
+        borderRadius="10px"
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        bgColor="#74C848"
+        flexDirection="column"
+      >
+        <Box
+          borderRadius="10px"
+          h="70%"
+          w="95%"
+          bgColor="white"
+          direction="column"
+          justify="space-between"
+          align="center"
+          my="0.5"
+        >
+          <Text h="20%" textAlign="right">
+            #001
+          </Text>
+          <Image h="80%" src={bulbasaur} />
+        </Box>
+        <Text h="20%" color="white">
+          Bulbasaur
+        </Text>
+      </GridItem>
+      <GridItem
+        borderRadius="10px"
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        bgColor="#74C848"
+        flexDirection="column"
+      >
+        <Box
+          borderRadius="10px"
+          h="70%"
+          w="95%"
+          bgColor="white"
+          direction="column"
+          justify="space-between"
+          align="center"
+          my="0.5"
+        >
+          <Text h="20%" textAlign="right">
+            #001
+          </Text>
+          <Image h="80%" src={bulbasaur} />
+        </Box>
+        <Text h="20%" color="white">
+          Bulbasaur
+        </Text>
+      </GridItem>
+
+      {/* <GridItem w="100%" bg="blue.700" />
       <GridItem w="100%" bg="blue.700" />
       <GridItem w="100%" bg="blue.700" />
       <GridItem w="100%" bg="blue.700" />
       <GridItem w="100%" bg="blue.700" />
       <GridItem w="100%" bg="blue.700" />
       <GridItem w="100%" bg="blue.700" />
-      <GridItem w="100%" bg="blue.700" />
-      <GridItem w="100%" bg="blue.700" />
+      <GridItem w="100%" bg="blue.700" /> */}
     </Grid>
   );
 }
