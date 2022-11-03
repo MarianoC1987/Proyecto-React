@@ -2,7 +2,7 @@ import { Grid } from "@chakra-ui/react";
 import React from "react";
 import Card from "./Card";
 import pokemon from "../../datos";
-function Main() {
+function Main(props) {
   return (
     <Grid
       my="30px"
@@ -13,15 +13,19 @@ function Main() {
       w="95vw"
       gap={3}
     >
-      {pokemon.map((pokemon) => (
-        <Card
-          key={pokemon.id}
-          nombre={pokemon.nombre}
-          id={pokemon.id}
-          imagen={pokemon.imagen}
-          color={pokemon.color}
-        />
-      ))}
+      {pokemon
+        .filter((poke) =>
+          poke.nombre.toLowerCase().includes(props.buscar.toLowerCase())
+        )
+        .map((pokemons) => (
+          <Card
+            key={pokemons.id}
+            nombre={pokemons.nombre}
+            id={pokemons.id}
+            imagen={pokemons.imagen}
+            color={pokemons.color}
+          />
+        ))}
     </Grid>
   );
 }
