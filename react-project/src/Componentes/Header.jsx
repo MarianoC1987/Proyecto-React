@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, Image, Flex, Input, Button } from "@chakra-ui/react";
+import Arrow from "../../public/Imagenes/Arrow.svg";
 
 function Header(props) {
   return (
@@ -18,10 +19,17 @@ function Header(props) {
           variant="filled"
           placeholder="Buscar"
           onChange={props.handleChange}
+          color="white"
         ></Input>
 
-        <Button height="40px" colorScheme="Black" variant="link" border="1px ">
-          ASD
+        <Button
+          onClick={props.handleClick}
+          height="40px"
+          colorScheme="Black"
+          variant="link"
+          border="1px "
+        >
+          A <Image src={Arrow} />
         </Button>
       </Flex>
     </>

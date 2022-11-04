@@ -23,7 +23,7 @@ function Card({ nombre, id, imagen, color }) {
         my="0.5"
       >
         <Text h="20%" textAlign="right" color={color}>
-          {id}
+          {"#" + id}
         </Text>
         <Image h="80%" src={imagen} />
       </Box>
