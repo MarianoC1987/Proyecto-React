@@ -45,7 +45,7 @@ function Card() {
         display="flex"
         alignItems="center"
         justifyContent="space-between"
-        bgColor="#74C848"
+        bgColor="#a78723"
         flexDirection="column"
       >
         <Box
