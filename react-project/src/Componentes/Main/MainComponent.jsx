@@ -2,6 +2,8 @@ import { Grid } from "@chakra-ui/react";
 import React from "react";
 import Card from "./Card";
 import pokemon from "../../datos";
+import { Link } from "react-router-dom";
+
 function Main(props) {
   return (
     <Grid
@@ -18,13 +20,15 @@ function Main(props) {
           poke.nombre.toLowerCase().includes(props.buscar.toLowerCase())
         )
         .map((pokemons) => (
-          <Card
-            key={pokemons.id}
-            nombre={pokemons.nombre}
-            id={pokemons.id}
-            imagen={pokemons.imagen}
-            color={pokemons.color}
-          />
+          <Link to={`modal/${pokemons.id}`}>
+            <Card
+              key={pokemons.id}
+              nombre={pokemons.nombre}
+              id={pokemons.id}
+              imagen={pokemons.imagen}
+              color={pokemons.color}
+            />
+          </Link>
         ))}
     </Grid>
   );
