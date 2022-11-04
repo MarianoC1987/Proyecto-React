@@ -1,6 +1,6 @@
 let pokemon = [
   {
-    id: "#001",
+    id: "001",
     nombre: "Bulbasaur",
     imagen: "../Imagenes/bulbasaur.png",
     tipo: ["Grass", "Poison"],
@@ -24,7 +24,7 @@ let pokemon = [
   },
 
   {
-    id: "#004",
+    id: "004",
     nombre: "Charmander",
     imagen: "../Imagenes/charmander.png",
     tipo: ["Fire"],
@@ -45,7 +45,7 @@ let pokemon = [
   },
 
   {
-    id: "#007",
+    id: "007",
     nombre: "Squirtle",
     imagen: "../Imagenes/squirtle.png",
     tipo: ["Water"],
@@ -66,7 +66,7 @@ let pokemon = [
   },
 
   {
-    id: "#012",
+    id: "012",
     nombre: "Butterfree",
     imagen: "../Imagenes/butterfree.png",
     tipo: ["Bug", "Flying"],
@@ -87,7 +87,7 @@ let pokemon = [
   },
 
   {
-    id: "#025",
+    id: "025",
     nombre: "Pikachu",
     imagen: "../Imagenes/pikachu.png",
     tipo: ["Electric"],
@@ -108,7 +108,7 @@ let pokemon = [
   },
 
   {
-    id: "#092",
+    id: "092",
     nombre: "Gastly",
     imagen: "../Imagenes/gastly.png",
     tipo: ["Ghost", "Type"],
@@ -129,7 +129,7 @@ let pokemon = [
   },
 
   {
-    id: "#132",
+    id: "132",
     nombre: "Ditto",
     imagen: "../Imagenes/ditto.png",
     tipo: ["Normal"],
@@ -150,7 +150,7 @@ let pokemon = [
   },
 
   {
-    id: "#152",
+    id: "152",
     nombre: "Mew",
     imagen: "../Imagenes/Mew.png",
     tipo: ["Psychic"],
@@ -171,7 +171,7 @@ let pokemon = [
   },
 
   {
-    id: "#304",
+    id: "304",
     nombre: "Aron",
     imagen: "../Imagenes/aron.png",
     tipo: ["Steel", "Rock"],

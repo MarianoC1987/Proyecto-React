@@ -19,8 +19,18 @@ import arrowleft from "../../../public/Imagenes/arrowleft.png";
 import Pokeball from "../../../public/Imagenes/Pokeball.png";
 import Weight from "../../../public/Imagenes/Weight.svg";
 import Height from "../../../public/Imagenes/Height.svg";
+import pokemon from "../../datos";
+import { useParams } from "react-router-dom";
 
 function Modal() {
+  const { id } = useParams();
+  const poke = pokemon.find((item) => {
+    return item.id === id;
+    console.log(poke);
+  });
+  console.log(poke);
+  console.log(id);
+
   return (
     <Flex
       position="relative"
@@ -49,7 +59,7 @@ function Modal() {
         <Flex zIndex="10" gap="10px">
           <Image src={arrowleft}></Image>
           <Text h="20%" color="white">
-            Bulbasaur
+            {poke.nombre}
           </Text>
         </Flex>
         <Text color="white" h="20%" textAlign="right">
@@ -223,7 +233,7 @@ function Modal() {
               isDisabled
               h="7px"
             >
-              <SliderTrack h="6px" bg="#74cb4866">
+              <SliderTrack h="6px" bg={"#74cb48" + 66}>
                 <SliderFilledTrack bg="#74cb48" opacity="1" />
               </SliderTrack>
             </Slider>

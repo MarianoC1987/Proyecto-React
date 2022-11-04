@@ -4,9 +4,13 @@ import { Text, Image, Flex, Input, Button } from "@chakra-ui/react";
 function Header(props) {
   return (
     <>
-      <Flex justify="flex-start" px="17%" align="center" w="390px" gap="15px">
-        <Image src={"../Imagenes/Pokeball.png"} boxSize="3.5em" my="2"></Image>
-        <Text fontSize="2.5em">Pokedex</Text>
+      <Flex justify="center" px="17%" align="center" w="100%" gap="15px">
+        <Image
+          src={"../Imagenes/pokebolacolor2.png"}
+          boxSize="3.5em"
+          my="2"
+        ></Image>
+        <Image src={"../Imagenes/pokedex.png"} my="1.5"></Image>
       </Flex>
       <Flex justify="space-between" m="auto" align="center" w="95vw">
         <Input
