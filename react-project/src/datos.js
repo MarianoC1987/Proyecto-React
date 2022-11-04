@@ -21,6 +21,7 @@ let pokemon = [
       SPD: 45,
     },
     color: "#74C848",
+    color2: "#a43e9e",
   },
 
   {
@@ -84,6 +85,7 @@ let pokemon = [
       SPD: 70,
     },
     color: "#a78723",
+    color2: "#a891ec",
   },
 
   {
@@ -111,7 +113,7 @@ let pokemon = [
     id: "092",
     nombre: "Gastly",
     imagen: "../Imagenes/gastly.png",
-    tipo: ["Ghost", "Type"],
+    tipo: ["Ghost", "Normal"],
     peso: "0.1 Kg",
     altura: "1.3 m",
     movimientos: ["Levitate"],
@@ -126,6 +128,7 @@ let pokemon = [
       SPD: 80,
     },
     color: "#70559b",
+    color2: "#aaa67f",
   },
 
   {
@@ -189,6 +192,7 @@ let pokemon = [
       SPD: 30,
     },
     color: "#b7b9d0",
+    color: "#b69e31",
   },
 ];
 

@@ -20,16 +20,13 @@ import Pokeball from "../../../public/Imagenes/Pokeball.png";
 import Weight from "../../../public/Imagenes/Weight.svg";
 import Height from "../../../public/Imagenes/Height.svg";
 import pokemon from "../../datos";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function Modal() {
   const { id } = useParams();
   const poke = pokemon.find((item) => {
     return item.id === id;
-    console.log(poke);
   });
-  console.log(poke);
-  console.log(id);
 
   return (
     <Flex
@@ -39,7 +36,7 @@ function Modal() {
       borderRadius="12px"
       alignItems="center"
       justifyContent="space-around"
-      bgColor="#74C848"
+      bgColor={poke.color}
       flexDirection="column"
       w="100vw"
       h="100vh"
@@ -57,17 +54,19 @@ function Modal() {
       ></Image>
       <Flex justify="space-between" w="90%">
         <Flex zIndex="10" gap="10px">
-          <Image src={arrowleft}></Image>
+          <Link to={`/`}>
+            <Image src={arrowleft}></Image>
+          </Link>
           <Text h="20%" color="white">
             {poke.nombre}
           </Text>
         </Flex>
         <Text color="white" h="20%" textAlign="right">
-          #001
+          {"#" + poke.id}
         </Text>
       </Flex>
 
-      <Image h="30%" w="60%" zIndex="10" src={bulbasaur} mb="-100px" />
+      <Image h="30%" w="60%" zIndex="10" src={poke.imagen} mb="-100px" />
       <Flex
         flexDirection="column"
         borderRadius="12px"
@@ -89,11 +88,11 @@ function Modal() {
             w="70px"
             textAlign="center"
             borderRadius="9px"
-            bg="#74C848"
+            bg={poke.color}
             color="white"
             mb="10px"
           >
-            TipoOne
+            {poke.tipo[0]}
           </Box>
 
           <Box
@@ -101,17 +100,17 @@ function Modal() {
             w="70px"
             textAlign="center"
             borderRadius="9px"
-            bg="black"
+            bg={poke.color2}
             color="white"
             mb="10px"
           >
-            TipoTwo
+            {poke?.tipo[1]}
           </Box>
         </Flex>
         <Center
           fontWeight="bold"
           fontSize="22px"
-          color="#74C848"
+          color={poke.color}
           w="100%"
           h="8%"
         >
@@ -135,7 +134,7 @@ function Modal() {
             borderColor="gray.300"
           >
             <Image h="20px" w="20px" src={Weight}></Image>
-            <Text>W</Text>
+            <Text>{poke.peso}</Text>
           </GridItem>
           <GridItem
             display="flex"
@@ -146,7 +145,7 @@ function Modal() {
             borderColor="gray.300"
           >
             <Image h="20px" w="20px" src={Height}></Image>
-            <Text>H</Text>
+            <Text>{poke.altura}</Text>
           </GridItem>
           <GridItem
             display="flex"
@@ -154,8 +153,8 @@ function Modal() {
             justifyContent="center"
             alignItems="center"
           >
-            <Text>Move1</Text>
-            <Text>Move2</Text>
+            <Text>{poke.movimientos[0]}</Text>
+            <Text>{poke.movimientos[1]}</Text>
           </GridItem>
           <GridItem borderRight="1px" borderColor="gray.300" textAlign="center">
             Weight
@@ -168,8 +167,7 @@ function Modal() {
 
         <Flex w="100%" h="16%">
           <Text m="auto" p="10px" fontSize="14px">
-            There is a plant seed on its back right from the day this Pokémon is
-            born. The seed slowly grows larger.
+            {poke.descripcion}
           </Text>
         </Flex>
 
@@ -177,7 +175,7 @@ function Modal() {
           fontWeight="bold"
           w="100%"
           fontSize="22px"
-          color="#74C848"
+          color={poke.color}
           h="8%"
         >
           Base Stats
@@ -188,7 +186,7 @@ function Modal() {
             direction="column"
             fontWeight="bold"
             fontSize="13px"
-            color="#74C848"
+            color={poke.color}
             w="15%"
             align="flex-end"
             borderRight="1px"
@@ -211,12 +209,12 @@ function Modal() {
             w="15%"
             justify="space-around"
           >
-            <Text>045</Text>
-            <Text>058</Text>
-            <Text>032</Text>
-            <Text>029</Text>
-            <Text>057</Text>
-            <Text>062</Text>
+            <Text>{poke.estadisticas.HP}</Text>
+            <Text>{poke.estadisticas.ATK}</Text>
+            <Text>{poke.estadisticas.DEF}</Text>
+            <Text>{poke.estadisticas.SATK}</Text>
+            <Text>{poke.estadisticas.SDEF}</Text>
+            <Text>{poke.estadisticas.SPD}</Text>
           </Flex>
           <Flex
             justify="center"
@@ -227,69 +225,69 @@ function Modal() {
             gap="18px"
           >
             <Slider
-              aria-label="slider-ex-1"
-              defaultValue={30}
+              aria-label={poke.id}
+              defaultValue={poke.estadisticas.HP}
               max={200}
               isDisabled
               h="7px"
             >
-              <SliderTrack h="6px" bg={"#74cb48" + 66}>
-                <SliderFilledTrack bg="#74cb48" opacity="1" />
+              <SliderTrack h="6px" bg={poke.color + 66}>
+                <SliderFilledTrack bg={poke.color} opacity="1" />
               </SliderTrack>
             </Slider>
             <Slider
-              aria-label="slider-ex-1"
-              defaultValue={30}
+              aria-label={poke.id}
+              defaultValue={poke.estadisticas.ATK}
               max={200}
               isDisabled
               h="7px"
             >
-              <SliderTrack h="6px" bg="#74cb4866">
-                <SliderFilledTrack bg="#74cb48" opacity="1" />
+              <SliderTrack h="6px" bg={poke.color + 66}>
+                <SliderFilledTrack bg={poke.color} opacity="1" />
               </SliderTrack>
             </Slider>
             <Slider
-              aria-label="slider-ex-1"
-              defaultValue={30}
+              aria-label={poke.id}
+              defaultValue={poke.estadisticas.DEF}
               max={200}
               isDisabled
               h="7px"
             >
-              <SliderTrack h="6px" bg="#74cb4866">
-                <SliderFilledTrack bg="#74cb48" opacity="1" />
+              <SliderTrack h="6px" bg={poke.color + 66}>
+                <SliderFilledTrack bg={poke.color} opacity="1" />
               </SliderTrack>
             </Slider>
             <Slider
-              aria-label="slider-ex-1"
-              defaultValue={30}
+              aria-label={poke.id}
+              defaultValue={poke.estadisticas.SATK}
               max={200}
               isDisabled
               h="7px"
             >
-              <SliderTrack h="6px" bg="#74cb4866">
-                <SliderFilledTrack bg="#74cb48" opacity="1" />
+              <SliderTrack h="6px" bg={poke.color + 66}>
+                <SliderFilledTrack bg={poke.color} opacity="1" />
               </SliderTrack>
             </Slider>
             <Slider
-              aria-label="slider-ex-1"
-              defaultValue={30}
+              aria-label={poke.id}
+              defaultValue={poke.estadisticas.SDEF}
               max={200}
               isDisabled
               h="7px"
             >
-              <SliderTrack h="6px" bg="#74cb4866">
-                <SliderFilledTrack bg="#74cb48" opacity="1" />
+              <SliderTrack h="6px" bg={poke.color + 66}>
+                <SliderFilledTrack bg={poke.color} opacity="1" />
               </SliderTrack>
             </Slider>
             <Slider
-              aria-label="slider-ex-1"
-              defaultValue={30}
+              aria-label={poke.id}
+              defaultValue={poke.estadisticas.SPD}
               max={200}
               isDisabled
               h="7px"
             >
-              <SliderTrack h="6px" bg="#74cb4866">
-                <SliderFilledTrack bg="#74cb48" opacity="1" />
+              <SliderTrack h="6px" bg={poke.color + 66}>
+                <SliderFilledTrack bg={poke.color} opacity="1" />
               </SliderTrack>
             </Slider>
           </Flex>
