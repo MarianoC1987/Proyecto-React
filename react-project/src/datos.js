@@ -192,7 +192,7 @@ let pokemon = [
       SPD: 30,
     },
     color: "#b7b9d0",
-    color: "#b69e31",
+    color2: "#b69e31",
   },
 ];
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Image, Flex, Input, Button } from "@chakra-ui/react";
+import { Image, Flex, Input, Button } from "@chakra-ui/react";
 import Arrow from "../../public/Imagenes/Arrow.svg";
 
 function Header(props) {
