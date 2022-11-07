@@ -20,9 +20,8 @@ function Main(props) {
           poke.nombre.toLowerCase().includes(props.buscar.toLowerCase())
         )
         .map((pokemons) => (
-          <Link to={`modal/${pokemons.id}`}>
+          <Link key={pokemons.id} to={`modal/${pokemons.id}`}>
             <Card
-              key={pokemons.id}
               nombre={pokemons.nombre}
               id={pokemons.id}
               imagen={pokemons.imagen}
