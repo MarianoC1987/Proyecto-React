@@ -94,18 +94,19 @@ function Modal() {
           >
             {poke.tipo[0]}
           </Box>
-
-          <Box
-            lineHeight="28px"
-            w="70px"
-            textAlign="center"
-            borderRadius="9px"
-            bg={poke.color2}
-            color="white"
-            mb="10px"
-          >
-            {poke?.tipo[1]}
-          </Box>
+          {poke.tipo[1] && (
+            <Box
+              lineHeight="28px"
+              w="70px"
+              textAlign="center"
+              borderRadius="9px"
+              bg={poke.color2}
+              color="white"
+              mb="10px"
+            >
+              {poke.tipo[1]}
+            </Box>
+          )}
         </Flex>
         <Center
           fontWeight="bold"

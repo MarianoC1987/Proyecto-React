@@ -9,14 +9,15 @@ function Card({ nombre, id, imagen, color }) {
       display="flex"
       alignItems="center"
       justifyContent="space-between"
-      bgColor={color}
+      bgColor="#ffffff00"
       flexDirection="column"
     >
       <Box
+        border={"6px solid" + color}
         borderRadius="10px"
         h="60%"
         w="95%"
-        bgColor="white"
+        bgColor="#00000066"
         direction="column"
         justify="space-between"
         align="center"
@@ -27,11 +28,19 @@ function Card({ nombre, id, imagen, color }) {
         </Text>
         <Image h="80%" src={imagen} />
       </Box>
-      <Text h="20%" color="white">
+      <Text
+        h="100%"
+        w="95%"
+        color="white"
+        bgColor={color}
+        borderRadius="0 0 10px 10px"
+        mt="-10px"
+        align="center"
+      >
         {nombre}
       </Text>
     </GridItem>
   );
 }
-
+// cambios raros para arreglar el fondo de las cards
 export default Card;
