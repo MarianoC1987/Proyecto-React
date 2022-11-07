@@ -14,7 +14,6 @@ import {
   Slider,
 } from "@chakra-ui/react";
 import React from "react";
-import bulbasaur from "../../../public/Imagenes/bulbasaur.png";
 import arrowleft from "../../../public/Imagenes/arrowleft.png";
 import Pokeball from "../../../public/Imagenes/Pokeball.png";
 import Weight from "../../../public/Imagenes/Weight.svg";
@@ -48,10 +47,11 @@ function Modal() {
         top="1vh"
         right="4vw"
         align="right"
-        zIndex="5"
+        zIndex="0"
         opacity="0.1"
-        src="/Imagenes/Pokeball.png"
+        src={Pokeball}
       ></Image>
+
       <Flex justify="space-between" w="90%">
         <Flex zIndex="10" gap="10px">
           <Link to={`/`}>
@@ -65,8 +65,26 @@ function Modal() {
           {"#" + poke.id}
         </Text>
       </Flex>
-
-      <Image h="30%" w="60%" zIndex="10" src={poke.imagen} mb="-100px" />
+      <Flex
+        align="center"
+        justify="space-around"
+        w="100%"
+        mb="-100px"
+        h="30%"
+        zIndex="10"
+      >
+        <Link to={`modal/${poke.id}`}>
+          <Image
+            h="10%"
+            src="/Imagenes/Frame.svg"
+            transform="rotate(180deg)"
+          ></Image>
+        </Link>
+        <Image src={poke.imagen} />
+        <Link to={`modal/${poke.id}`}>
+          <Image h="10%" src="/Imagenes/Frame.svg"></Image>
+        </Link>
+      </Flex>
       <Flex
         flexDirection="column"
         borderRadius="12px"
