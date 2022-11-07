@@ -7,21 +7,28 @@ import Body from "./Componentes/Imagenfondo";
 function App() {
   const [sort, setSort] = useState(true);
   const [buscar, setBuscar] = useState("");
+  const [sortbtn, setSortbtn] = useState("123");
 
   const handleChange = (e) => {
     setBuscar(e.target.value);
   };
   const handleClick = () => {
     setSort(!sort);
+
     sort
       ? pokemon.sort((a, b) => (a.nombre > b.nombre ? 1 : -1))
       : pokemon.sort((a, b) => (a.id > b.id ? 1 : -1));
+    sort ? setSortbtn("abc") : setSortbtn("123");
   };
 
   return (
     <>
       <Body />
-      <Header handleChange={handleChange} handleClick={handleClick} />
+      <Header
+        handleChange={handleChange}
+        handleClick={handleClick}
+        sortbtn={sortbtn}
+      />
       <Main buscar={buscar} />
     </>
   );

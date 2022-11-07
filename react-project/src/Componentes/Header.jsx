@@ -29,7 +29,7 @@ function Header(props) {
           variant="link"
           border="1px "
         >
-          A <Image src={Arrow} />
+          {props.sortbtn} <Image src={Arrow} />
         </Button>
       </Flex>
     </>
