@@ -25,9 +25,10 @@ function Header(props) {
         <Button
           onClick={props.handleClick}
           height="40px"
-          colorScheme="Black"
+          colorScheme="black"
           variant="link"
           border="1px "
+          bgColor="#ECEBEB50"
         >
           {props.sortbtn} <Image src={Arrow} />
         </Button>
