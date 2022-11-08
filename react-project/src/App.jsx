@@ -1,14 +1,25 @@
 import Header from "./Componentes/Header";
 import Main from "./Componentes/Main/MainComponent";
-import { useState } from "react";
-import pokemon from "./datos";
-import Body from "./Componentes/Imagenfondo";
+import { useEffect, useState } from "react";
 import { Image } from "@chakra-ui/react";
 
 function App() {
   const [sort, setSort] = useState(true);
   const [buscar, setBuscar] = useState("");
   const [sortbtn, setSortbtn] = useState("123");
+  const [pokemon, setPokemon] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/pokemon", {
+      method: "GET",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setPokemon(data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   const handleChange = (e) => {
     setBuscar(e.target.value);
@@ -26,7 +37,7 @@ function App() {
   return (
     <>
       <Image
-        position="absolute"
+        position="fixed"
         objectFit="cover"
         w="100vw"
         h="100vh"
@@ -38,7 +49,7 @@ function App() {
         handleClick={handleClick}
         sortbtn={sortbtn}
       />
-      <Main buscar={buscar} />
+      <Main buscar={buscar} pokemon={pokemon} />
     </>
   );
 }

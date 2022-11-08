@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Image, Grid, GridItem, Text } from "@chakra-ui/react";
 import bulbasaur from "../../../public/Imagenes/bulbasaur.png";
+import "./card.css";
 
 function Card({ nombre, id, imagen, color }) {
   return (
@@ -17,7 +18,7 @@ function Card({ nombre, id, imagen, color }) {
         borderRadius="10px"
         h="60%"
         w="95%"
-        bgColor="#00000066"
+        bgColor="#000000a0"
         direction="column"
         justify="space-between"
         align="center"
@@ -26,7 +27,7 @@ function Card({ nombre, id, imagen, color }) {
         <Text h="20%" textAlign="right" color={color}>
           {"#" + id}
         </Text>
-        <Image h="80%" src={imagen} />
+        <Image h="80%" src={imagen} className="boxshadow" />
       </Box>
       <Text
         h="100%"
