@@ -17,6 +17,7 @@ import Weight from "../../../public/Imagenes/Weight.svg";
 import Height from "../../../public/Imagenes/Height.svg";
 import pokemon from "../../datos";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
 
 function Modal() {
   const { id } = useParams();
@@ -26,7 +27,7 @@ function Modal() {
     return item.id === id;
   });
 
-  const indexPoke = pokemon.findIndex((item) => {
+  const index = pokemon.findIndex((item) => {
     return item.id === id;
   });
 
@@ -85,17 +86,33 @@ function Modal() {
           h="30%"
           zIndex="10"
         >
-          <Link to={`modal/${poke.id}`}>
-            <Image
-              h="10%"
-              src="/Imagenes/arrow-24-16.png"
-              transform="rotate(180deg)"
-            ></Image>
-          </Link>
+          {pokemon[index - 1] ? (
+            <Link to={`/modal/${pokemon[index - 1].id}`}>
+              <Image
+                h="10%"
+                src="/Imagenes/arrow-24-16.png"
+                transform="rotate(180deg)"
+              ></Image>
+            </Link>
+          ) : (
+            <Link to={`/modal/${pokemon[pokemon.length - 1].id}`}>
+              <Image
+                h="10%"
+                src="/Imagenes/arrow-24-16.png"
+                transform="rotate(180deg)"
+              ></Image>
+            </Link>
+          )}
           <Image src={poke.imagen} />
-          <Link to={`modal/${poke.id}`}>
-            <Image h="10%" src="/Imagenes/arrow-24-16.png"></Image>
-          </Link>
+          {pokemon[index + 1] ? (
+            <Link to={`/modal/${pokemon[index + 1].id}`}>
+              <Image h="10%" src="/Imagenes/arrow-24-16.png"></Image>
+            </Link>
+          ) : (
+            <Link to={`/modal/${pokemon[0].id}`}>
+              <Image h="10%" src="/Imagenes/arrow-24-16.png"></Image>
+            </Link>
+          )}
         </Flex>
         <Flex
           flexDirection="column"

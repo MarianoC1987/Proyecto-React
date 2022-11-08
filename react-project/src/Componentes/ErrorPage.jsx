@@ -18,7 +18,7 @@ function ErrorPage() {
         Parece que ha ocurrido un error.
         <br />
         <br />
-        Por favor recarga la página o haz click en el botón para volver al menú
+        Intenta recargar la página o haz click en el botón para volver al menú
         principal.
       </Text>
       <Link to={`/`}>
