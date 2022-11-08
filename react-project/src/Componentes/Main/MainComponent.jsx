@@ -1,7 +1,6 @@
 import { Grid } from "@chakra-ui/react";
 import React from "react";
 import Card from "./Card";
-import pokemon from "../../datos";
 import { Link } from "react-router-dom";
 
 function Main(props) {
@@ -15,7 +14,7 @@ function Main(props) {
       w="95vw"
       gap={3}
     >
-      {pokemon
+      {props.pokemon
         .filter((poke) =>
           poke.nombre.toLowerCase().includes(props.buscar.toLowerCase())
         )
