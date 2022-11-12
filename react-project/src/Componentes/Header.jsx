@@ -30,7 +30,8 @@ function Header(props) {
           border="1px "
           bgColor="#ECEBEB50"
         >
-          {props.sortbtn} <Image src={Arrow} />
+          {props.sortbtn}
+          <Image src={Arrow} />
         </Button>
       </Flex>
     </>
