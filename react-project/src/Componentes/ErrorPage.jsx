@@ -1,12 +1,16 @@
 import { Flex, Text, Image, Button } from "@chakra-ui/react";
 import { useRouteError, Link } from "react-router-dom";
-import rocket_team from "../../public/Imagenes/rocket.png";
 
 function ErrorPage() {
   const error = useRouteError();
   return (
     <Flex direction="column" justify="start" align="center" h="100vh">
-      <Image src={rocket_team} h="30%" borderRadius="30px" mt="15vh"></Image>
+      <Image
+        src="/public/Imagenes/rocket.png"
+        h="30%"
+        borderRadius="30px"
+        mt="15vh"
+      ></Image>
       <Text
         fontSize="1em"
         textAlign="center"
